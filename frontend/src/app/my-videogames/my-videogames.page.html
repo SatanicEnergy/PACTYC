@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>My videogames</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let b of videogames">
+    <ion-label>
+      <h1>{{b.genre}}</h1>
+      <p>{{b.company}}</p>
+    </ion-label>
+  </ion-item>
+</ion-content>
