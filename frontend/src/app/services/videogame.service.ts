@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class VideogameService {
 
-  endpoint = 'http://localhost:8080/api/videogames';
+  endpoint = 'http://localhost:8080/videogames';
 
   constructor(private httpClient: HttpClient) { }
 

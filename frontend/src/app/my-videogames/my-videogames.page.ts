@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VideogameService } from '../services/videogame.service';
 
 @Component({
   selector: 'app-my-videogames',
@@ -7,21 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyVideogamesPage implements OnInit {
 
-  videogames: any = [
-    {
-      id: 1,
-      genre: "terror",
-      company: "Ubisoft"
-    }, {
-      id: 2,
-      genre: "accion",
-      company: "Bethesda"
-    }
-  ]
+  videogames: any = [];
 
-  constructor() { }
+  constructor(private videogameService: VideogameService) { }
 
   ngOnInit() {
+    this.getAllVideogames();
+  }
+
+  getAllVideogames() {
+    this.videogameService.getVideogames().subscribe(response => {
+      console.log("response guapa");
+      console.log(response);
+      this.videogames = response;
+    });
   }
 
 }
