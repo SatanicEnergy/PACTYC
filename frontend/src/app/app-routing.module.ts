@@ -14,7 +14,11 @@ const routes: Routes = [
   {
     path: 'my-videogames',
     loadChildren: () => import('./my-videogames/my-videogames.module').then( m => m.MyVideogamesPageModule)
+  },  {
+    path: 'add-videogame',
+    loadChildren: () => import('./add-videogame/add-videogame.module').then( m => m.AddVideogamePageModule)
   },
+
 
 ];
 

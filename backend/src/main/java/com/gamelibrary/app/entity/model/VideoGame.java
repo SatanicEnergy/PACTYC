@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "videogames")
-public class AppUser implements Serializable {
+public class VideoGame implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
@@ -22,11 +22,11 @@ public class AppUser implements Serializable {
 	String genre;
 	String company;
 	
-	public AppUser() {
+	public VideoGame() {
 		super();
 	}
 	
-	public AppUser(String title, String genre, String company) {
+	public VideoGame(String title, String genre, String company) {
 		super();
 		this.title = title;
 		this.genre = genre;

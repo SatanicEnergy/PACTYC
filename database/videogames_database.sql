@@ -16,28 +16,29 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `app_user`
+-- Table structure for table `videogames`
 --
 
-DROP TABLE IF EXISTS `app_user`;
+DROP TABLE IF EXISTS `videogames`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `app_user` (
-  `idapp_user` int NOT NULL,
-  `name` varchar(45) NOT NULL,
-  `surname` varchar(45) NOT NULL,
-  PRIMARY KEY (`idapp_user`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `videogames` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(45) NOT NULL,
+  `company` varchar(45) NOT NULL,
+  `genre` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `app_user`
+-- Dumping data for table `videogames`
 --
 
-LOCK TABLES `app_user` WRITE;
-/*!40000 ALTER TABLE `app_user` DISABLE KEYS */;
-INSERT INTO `app_user` VALUES (1,'Er','Mahe'),(2,'Er','Kevon'),(3,'Er','Yassil');
-/*!40000 ALTER TABLE `app_user` ENABLE KEYS */;
+LOCK TABLES `videogames` WRITE;
+/*!40000 ALTER TABLE `videogames` DISABLE KEYS */;
+INSERT INTO `videogames` VALUES (1,'Tekken 7','Bandai Namco','Lucha'),(2,'Hitman','IO Interactive','Sigilo'),(3,'Metal Gear Solid','Konami','Sigilo'),(13,'League of Legends','Riot Games','MOBA'),(14,'Dead By Daylight','Behaviour','Multijugador asimétrico');
+/*!40000 ALTER TABLE `videogames` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -49,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-09-21 17:04:35
+-- Dump completed on 2022-10-02 19:05:41

@@ -8,8 +8,7 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  brand: string = "BH";
-  model: string = "star";
+  title: string = "Bienvenido a tu lista de videojuegos personal";
 
   constructor(private router: Router) {}
 

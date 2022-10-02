@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Añadir un videojuego</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="ion-no-margin">
+    <ion-list-header lines="full">
+      <ion-button shape="round" routerLink="/my-videogames"><ion-icon slot="icon-only" name="arrow-back"></ion-icon></ion-button> 
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Título</ion-label>
+      <ion-input placeholder="Título del videojuego" type="text" [(ngModel)]="titleInput" required="true"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Compañía</ion-label>
+      <ion-input placeholder="Compañía que desarrolló el videojuego" type="text" [(ngModel)]="companyInput" required="true"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Género</ion-label>
+      <ion-input placeholder="Género principal del videojuego" type="text" [(ngModel)]="genreInput" required="true"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="addVideogame()" (click)="goBack()">Añadir</ion-button>
+</ion-content>

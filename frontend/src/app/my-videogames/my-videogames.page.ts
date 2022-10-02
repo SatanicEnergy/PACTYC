@@ -18,10 +18,20 @@ export class MyVideogamesPage implements OnInit {
 
   getAllVideogames() {
     this.videogameService.getVideogames().subscribe(response => {
-      console.log("response guapa");
-      console.log(response);
+      this.videogames = response;
+    }); 
+  }
+
+  ionViewDidEnter() {
+    this.videogameService.getVideogames().subscribe((response) => {
       this.videogames = response;
     });
+  }
+
+  removeVideogame(videogame) {
+    if(window.confirm('¿Seguro que quieres eliminar el videojuego?')) {
+      this.videogameService.deleteVideogame(videogame)
+    }
   }
 
 }

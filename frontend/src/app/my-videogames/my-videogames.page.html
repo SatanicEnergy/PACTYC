@@ -1,15 +1,24 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>My videogames</ion-title>
+    <ion-title>Mis videojuegos</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-toolbar>
+    <ion-button shape="round" color="black" routerLink="/home"><ion-icon slot="icon-only" name="arrow-back"></ion-icon></ion-button>
+    <ion-button shape="round" routerLink="/add-videogame" ><ion-icon slot="icon-only" name="add"></ion-icon></ion-button>
+    <ion-button shape="round" color="light" (click)="ionViewDidEnter()"><ion-icon slot="icon-only" name="refresh"></ion-icon></ion-button>
+  </ion-toolbar>
   <ion-item *ngFor="let b of videogames">
     <ion-label>
       <h1>{{b.title}}</h1>
       <p>{{b.company}}</p>
       <p>{{b.genre}}</p>
     </ion-label>
+
+    <div class="item-note" item-end>
+      <ion-button shape="round" size="small" color="danger" (click)="removeVideogame(b)"><ion-icon slot="icon-only" name="trash"></ion-icon></ion-button>
+    </div>  
   </ion-item>
 </ion-content>
